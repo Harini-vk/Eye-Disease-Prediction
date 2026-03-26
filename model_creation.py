@@ -40,47 +40,45 @@ data_augmentation = tf.keras.Sequential([
     layers.RandomContrast(0.1),
 ])
 
-# Build improved CNN model
-model = models.Sequential([
-    # Data augmentation (applied during training only)
-    data_augmentation,
-    
-    # Rescaling
-    layers.Rescaling(1./255),
-    
-    # First Conv Block
-    layers.Conv2D(32, 3, padding='same', activation='relu'),
-    layers.BatchNormalization(),
-    layers.MaxPooling2D(),
-    layers.Dropout(0.2),
-    
-    # Second Conv Block
-    layers.Conv2D(64, 3, padding='same', activation='relu'),
-    layers.BatchNormalization(),
-    layers.MaxPooling2D(),
-    layers.Dropout(0.2),
-    
-    # Third Conv Block
-    layers.Conv2D(128, 3, padding='same', activation='relu'),
-    layers.BatchNormalization(),
-    layers.MaxPooling2D(),
-    layers.Dropout(0.2),
-    
-    # Fourth Conv Block
-    layers.Conv2D(256, 3, padding='same', activation='relu'),
-    layers.BatchNormalization(),
-    layers.MaxPooling2D(),
-    layers.Dropout(0.3),
-    
-    # Dense layers
-    layers.Flatten(),
-    layers.Dense(256, activation='relu'),
-    layers.BatchNormalization(),
-    layers.Dropout(0.5),
-    layers.Dense(128, activation='relu'),
-    layers.Dropout(0.3),
-    layers.Dense(len(class_names), activation='softmax')
-])
+# Build improved CNN model using Functional API
+inputs = tf.keras.Input(shape=(224, 224, 3))
+x = data_augmentation(inputs)
+x = layers.Rescaling(1./255)(x)
+
+# First Conv Block
+x = layers.Conv2D(32, 3, padding='same', activation='relu')(x)
+x = layers.BatchNormalization()(x)
+x = layers.MaxPooling2D()(x)
+x = layers.Dropout(0.2)(x)
+
+# Second Conv Block
+x = layers.Conv2D(64, 3, padding='same', activation='relu')(x)
+x = layers.BatchNormalization()(x)
+x = layers.MaxPooling2D()(x)
+x = layers.Dropout(0.2)(x)
+
+# Third Conv Block
+x = layers.Conv2D(128, 3, padding='same', activation='relu')(x)
+x = layers.BatchNormalization()(x)
+x = layers.MaxPooling2D()(x)
+x = layers.Dropout(0.2)(x)
+
+# Fourth Conv Block
+x = layers.Conv2D(256, 3, padding='same', activation='relu')(x)
+x = layers.BatchNormalization()(x)
+x = layers.MaxPooling2D()(x)
+x = layers.Dropout(0.3)(x)
+
+# Dense layers
+x = layers.Flatten()(x)
+x = layers.Dense(256, activation='relu')(x)
+x = layers.BatchNormalization()(x)
+x = layers.Dropout(0.5)(x)
+x = layers.Dense(128, activation='relu')(x)
+x = layers.Dropout(0.3)(x)
+outputs = layers.Dense(len(class_names), activation='softmax')(x)
+
+model = tf.keras.Model(inputs=inputs, outputs=outputs)
 
 # Compile model
 model.compile(
@@ -90,7 +88,6 @@ model.compile(
 )
 
 # Model summary
-model.build((None, 224, 224, 3))
 model.summary()
 
 # Callbacks
