@@ -1,6 +1,6 @@
 # Explainable Eye Disease Detection System
 
-A Deep Learning–based system for automated detection of eye diseases from retinal fundus images using Convolutional Neural Networks (CNNs) with explainability support (Grad‑CAM — Coming Soon).
+A Deep Learning–based system for automated detection of eye diseases from retinal fundus images using Convolutional Neural Networks (CNNs) with explainability support (Grad‑CAM) and a Analysis dashboard (Coming soon).
 
 ---
 
@@ -62,3 +62,10 @@ pip install -r requirements.txt
 ```bash
 git clone https://github.com/your-username/eye-disease-detection.git
 cd eye-disease-detection
+Prediction:
+<img width="1919" height="873" alt="image" src="https://github.com/user-attachments/assets/2be5c214-22ea-4949-a093-829885fafe2a" />
+Grad-CAM and explanation
+<img width="1916" height="869" alt="image" src="https://github.com/user-attachments/assets/d7a0713a-ee8b-49d1-9dd1-7dd79a1bea32" />
+<img width="1911" height="872" alt="image" src="https://github.com/user-attachments/assets/090421e8-74e0-4b9f-927a-72565187185f" />
+
+Analysis dashboard...Coming soon
