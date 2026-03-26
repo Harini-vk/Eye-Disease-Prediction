@@ -52,7 +52,7 @@ Retinal fundus image datasets containing labeled eye disease categories were use
 ✔ Disease prediction  
 ✔ Confidence score  
 ✔ Multi-class classification  
-🚧 Grad‑CAM heatmap visualization (Coming Soon)
+✔ Grad‑CAM heatmap visualization (Coming Soon)
 
 ---
 
