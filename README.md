@@ -1,4 +1,4 @@
-# Explainable Eye Disease Detection System
+# Eye Disease Detection System
 
 A Deep Learning–based system for automated detection of eye diseases from retinal fundus images using Convolutional Neural Networks (CNNs) with explainability support (Grad‑CAM).
 
