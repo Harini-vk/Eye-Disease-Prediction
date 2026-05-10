@@ -15,7 +15,6 @@ This project develops an AI-powered medical imaging system capable of classifyin
 
 The system uses a trained CNN model and provides prediction confidence through a user-friendly Streamlit web interface.
 
-Future versions will integrate **Grad‑CAM visualization** for explainable AI.
 
 ---
 
@@ -56,12 +55,13 @@ Retinal fundus image datasets containing labeled eye disease categories were use
 
 ---
 
-## 🚀 Installation
-pip install -r requirements.txt
+
 Prediction:
 <img width="1919" height="873" alt="image" src="https://github.com/user-attachments/assets/2be5c214-22ea-4949-a093-829885fafe2a" />
 Grad-CAM and explanation
 <img width="1916" height="869" alt="image" src="https://github.com/user-attachments/assets/d7a0713a-ee8b-49d1-9dd1-7dd79a1bea32" />
+
+
 <img width="1911" height="872" alt="image" src="https://github.com/user-attachments/assets/090421e8-74e0-4b9f-927a-72565187185f" />
 
 
