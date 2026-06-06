@@ -4,7 +4,7 @@ A Deep Learning–based system for automated detection of eye diseases from reti
 
 ---
 
-## 🏥 Project Overview
+## Project Overview
 
 This project develops an AI-powered medical imaging system capable of classifying retinal diseases such as:
 
@@ -18,7 +18,7 @@ The system uses a trained CNN model and provides prediction confidence through a
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Automate eye disease detection using deep learning
 - Assist ophthalmologists in faster diagnosis
@@ -27,7 +27,7 @@ The system uses a trained CNN model and provides prediction confidence through a
 
 ---
 
-## 🧠 Technologies Used
+## Technologies Used
 
 - Python  
 - TensorFlow / Keras  
@@ -37,7 +37,7 @@ The system uses a trained CNN model and provides prediction confidence through a
 
 ---
 
-## 🖼️ Dataset
+## Dataset
 
 Retinal fundus image datasets containing labeled eye disease categories were used for training and evaluation.
 
@@ -45,7 +45,7 @@ Retinal fundus image datasets containing labeled eye disease categories were use
 
 ---
 
-## ⚙️ Features
+##  Features
 
 ✔ Upload retinal image  
 ✔ Disease prediction  
